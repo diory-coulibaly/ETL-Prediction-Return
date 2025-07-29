@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: etf_stock_prediction_streamlit
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run etf_stock_prediction_streamlit.py --server.port 8080 --server.enableCORS false
