@@ -147,6 +147,14 @@ def plot_return_distribution(df):
 st.set_page_config(layout="wide")
 st.title("📈 ETF or Stock Price Prediction & Return Classification")
 
+# 📷 Quick preview of expected CSV format
+from PIL import Image
+image = Image.open("etl.JPG")
+st.image(image, caption="CSV Format: etl", use_container_width=True, output_format="JPEG")
+image1 = Image.open("stock.JPG")
+st.image(image1, caption="CSV Format: stocks", use_container_width=True, output_format="JPEG")
+
+
 # File uploader and format selector
 file_type = st.radio("Select File Type", options=["ETF CSV", "Stock CSV"])
 uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])
